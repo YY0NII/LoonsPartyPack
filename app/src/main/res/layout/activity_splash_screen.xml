@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:theme="@style/SplashTheme">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_white_80dp" />
+    <!--I used the vector asset that comes default in android studio
+    Made it white and made it larger so that it would take up most of the screen-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/loon_s_party_pack"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"/>
+
+
+</LinearLayout>
