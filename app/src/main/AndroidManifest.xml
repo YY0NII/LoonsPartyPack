@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen"
+        <activity android:name=".Game1.TicTacToe"/>
+        <activity
+            android:name=".SplashScreen"
             android:theme="@style/SplashTheme">
-            <!--Created a new style that removes the action bar from the splash screen-->
+
+            <!-- Created a new style that removes the action bar from the splash screen -->
             <intent-filter>
 
                 <!-- Sets splash screen as the first activity to be opened -->
@@ -20,8 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
