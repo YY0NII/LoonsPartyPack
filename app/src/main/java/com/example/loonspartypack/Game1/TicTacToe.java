@@ -1,7 +1,7 @@
 //******************************************************
 // File: TicTacToe.java
 //
-// Purpose: Contains necessary code for the tictactoe
+// Purpose: to host the necessary code for the tictactoe
 // game
 //
 // Written By: Jonathon Carrera
@@ -31,6 +31,7 @@ public class TicTacToe extends AppCompatActivity {
     private boolean player2 = false;
 
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
+    Button[] buttons = new Button[9];
 
     TextView textView;
 
@@ -48,6 +49,16 @@ public class TicTacToe extends AppCompatActivity {
         b7 = (Button) findViewById(R.id.button7);
         b8 = (Button) findViewById(R.id.button8);
         b9 = (Button) findViewById(R.id.button9);
+
+        buttons[0] = b1;
+        buttons[1] = b2;
+        buttons[2] = b3;
+        buttons[3] = b4;
+        buttons[4] = b5;
+        buttons[5] = b6;
+        buttons[6] = b7;
+        buttons[7] = b8;
+        buttons[8] = b9;
 
         textView = (TextView) findViewById(R.id.tv1);
     }
@@ -87,8 +98,9 @@ public class TicTacToe extends AppCompatActivity {
     // again
     //****************************************************
     public void reset(View v){
-        finish();
-        startActivity(new Intent(getIntent()));
+        clearButtonText();
+        enableButtons();
+        textView.setText(R.string.tictactoe);
     }
 
     //****************************************************
@@ -122,7 +134,7 @@ public class TicTacToe extends AppCompatActivity {
         //endregion
 
         //region Check For Vertical  Win
-        if ( !b1.getText().toString().isEmpty() && b1.getText().toString().equals(b4.getText().toString())
+        else if ( !b1.getText().toString().isEmpty() && b1.getText().toString().equals(b4.getText().toString())
                 &&  b1.getText().toString().equals(b7.getText().toString()) )
         {
             checkWhoWon(b1);
@@ -143,7 +155,7 @@ public class TicTacToe extends AppCompatActivity {
         //endregion
 
         //region Check For Diagonal  Win
-        if ( !b1.getText().toString().isEmpty() && b1.getText().toString().equals(b5.getText().toString())
+        else if ( !b1.getText().toString().isEmpty() && b1.getText().toString().equals(b5.getText().toString())
                 &&  b1.getText().toString().equals(b9.getText().toString()) )
         {
             checkWhoWon(b1);
@@ -158,12 +170,11 @@ public class TicTacToe extends AppCompatActivity {
         //endregion
 
         //region Check For No winner
-        if ( !b1.getText().toString().isEmpty() && !b2.getText().toString().isEmpty() && !b3.getText().toString().isEmpty()
+        else if ( !b1.getText().toString().isEmpty() && !b2.getText().toString().isEmpty() && !b3.getText().toString().isEmpty()
                 && !b4.getText().toString().isEmpty() && !b5.getText().toString().isEmpty() && !b6.getText().toString().isEmpty()
                 && !b7.getText().toString().isEmpty() && !b8.getText().toString().isEmpty() && !b9.getText().toString().isEmpty() )
         {
-            Toast.makeText(TicTacToe.this, "Game Over", Toast.LENGTH_LONG).show();
-            disableButtons();
+            noWinner();
         }
         //endregion
     }
@@ -174,18 +185,6 @@ public class TicTacToe extends AppCompatActivity {
     // Purpose: Disables all currently enabled buttons
     //****************************************************
     public void disableButtons(){
-        Button[] buttons = new Button[9];
-
-        buttons[0] = b1;
-        buttons[1] = b2;
-        buttons[2] = b3;
-        buttons[3] = b4;
-        buttons[4] = b5;
-        buttons[5] = b6;
-        buttons[6] = b7;
-        buttons[7] = b8;
-        buttons[8] = b9;
-
         for (int i = 0; i < 9; i++){
             if (buttons[i].isEnabled()){
                 buttons[i].setEnabled(false);
@@ -193,6 +192,13 @@ public class TicTacToe extends AppCompatActivity {
         }
     }
 
+    //****************************************************
+    // Method: checkWhoWon()
+    //
+    // Purpose: to find out whether X or O has won then
+    // change the above textview and show a Toast reflecting
+    // it's findings
+    //****************************************************
     public void checkWhoWon(Button button){
         if (button.getText().toString().equals("X")){
             Toast.makeText(TicTacToe.this, "X Wins", Toast.LENGTH_LONG).show();
@@ -201,6 +207,18 @@ public class TicTacToe extends AppCompatActivity {
             Toast.makeText(TicTacToe.this, "O Wins", Toast.LENGTH_LONG).show();
             textView.setText(R.string.o_wins);
         }
+    }
+
+    //****************************************************
+    // Method: noWinner()
+    //
+    // Purpose: to change the textview and show a Toast
+    // that reflects that the game is over and no one has
+    // one
+    //****************************************************
+    public void noWinner(){
+        Toast.makeText(TicTacToe.this, "Game Over", Toast.LENGTH_LONG).show();
+        textView.setText(R.string.no_winner);
     }
 
     //****************************************************
@@ -216,5 +234,28 @@ public class TicTacToe extends AppCompatActivity {
         finish();
     }
 
+    //****************************************************
+    // Method: clearButtonText()
+    //
+    // Purpose: Clears the text of all 9 game buttons
+    //****************************************************
+    public void clearButtonText(){
+        for (int i = 0; i < 9; i++){
+            buttons[i].setText("");
+        }
+    }
+
+    //****************************************************
+    // Method: enableButtons()
+    //
+    // Purpose: re-enables game buttons
+    //****************************************************
+    public void enableButtons(){
+        for (int i = 0; i < 9; i++){
+            if (!buttons[i].isEnabled()){
+                buttons[i].setEnabled(true);
+            }
+        }
+    }
     //endregion
 }
