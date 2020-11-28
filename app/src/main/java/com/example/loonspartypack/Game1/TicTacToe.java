@@ -134,7 +134,7 @@ public class TicTacToe extends AppCompatActivity {
         //endregion
 
         //region Check For Vertical  Win
-        if ( !b1.getText().toString().isEmpty() && b1.getText().toString().equals(b4.getText().toString())
+        else if ( !b1.getText().toString().isEmpty() && b1.getText().toString().equals(b4.getText().toString())
                 &&  b1.getText().toString().equals(b7.getText().toString()) )
         {
             checkWhoWon(b1);
@@ -155,7 +155,7 @@ public class TicTacToe extends AppCompatActivity {
         //endregion
 
         //region Check For Diagonal  Win
-        if ( !b1.getText().toString().isEmpty() && b1.getText().toString().equals(b5.getText().toString())
+        else if ( !b1.getText().toString().isEmpty() && b1.getText().toString().equals(b5.getText().toString())
                 &&  b1.getText().toString().equals(b9.getText().toString()) )
         {
             checkWhoWon(b1);
@@ -170,7 +170,7 @@ public class TicTacToe extends AppCompatActivity {
         //endregion
 
         //region Check For No winner
-        if ( !b1.getText().toString().isEmpty() && !b2.getText().toString().isEmpty() && !b3.getText().toString().isEmpty()
+        else if ( !b1.getText().toString().isEmpty() && !b2.getText().toString().isEmpty() && !b3.getText().toString().isEmpty()
                 && !b4.getText().toString().isEmpty() && !b5.getText().toString().isEmpty() && !b6.getText().toString().isEmpty()
                 && !b7.getText().toString().isEmpty() && !b8.getText().toString().isEmpty() && !b9.getText().toString().isEmpty() )
         {
