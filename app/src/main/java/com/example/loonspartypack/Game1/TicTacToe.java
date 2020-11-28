@@ -31,6 +31,7 @@ public class TicTacToe extends AppCompatActivity {
     private boolean player2 = false;
 
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
+    Button[] buttons = new Button[9];
 
     TextView textView;
 
@@ -48,6 +49,16 @@ public class TicTacToe extends AppCompatActivity {
         b7 = (Button) findViewById(R.id.button7);
         b8 = (Button) findViewById(R.id.button8);
         b9 = (Button) findViewById(R.id.button9);
+
+        buttons[0] = b1;
+        buttons[1] = b2;
+        buttons[2] = b3;
+        buttons[3] = b4;
+        buttons[4] = b5;
+        buttons[5] = b6;
+        buttons[6] = b7;
+        buttons[7] = b8;
+        buttons[8] = b9;
 
         textView = (TextView) findViewById(R.id.tv1);
     }
@@ -87,8 +98,9 @@ public class TicTacToe extends AppCompatActivity {
     // again
     //****************************************************
     public void reset(View v){
-        finish();
-        startActivity(new Intent(getIntent()));
+        clearButtonText();
+        enableButtons();
+        textView.setText(R.string.tictactoe);
     }
 
     //****************************************************
@@ -174,18 +186,6 @@ public class TicTacToe extends AppCompatActivity {
     // Purpose: Disables all currently enabled buttons
     //****************************************************
     public void disableButtons(){
-        Button[] buttons = new Button[9];
-
-        buttons[0] = b1;
-        buttons[1] = b2;
-        buttons[2] = b3;
-        buttons[3] = b4;
-        buttons[4] = b5;
-        buttons[5] = b6;
-        buttons[6] = b7;
-        buttons[7] = b8;
-        buttons[8] = b9;
-
         for (int i = 0; i < 9; i++){
             if (buttons[i].isEnabled()){
                 buttons[i].setEnabled(false);
@@ -214,6 +214,30 @@ public class TicTacToe extends AppCompatActivity {
     public void onBackPressed() {
         startActivity(new Intent(TicTacToe.this, MainActivity.class));
         finish();
+    }
+
+    //****************************************************
+    // Method: clearButtonText()
+    //
+    // Purpose: Clears the text of all 9 game buttons
+    //****************************************************
+    public void clearButtonText(){
+        for (int i = 0; i < 9; i++){
+            buttons[i].setText("");
+        }
+    }
+
+    //****************************************************
+    // Method: enableButtons()
+    //
+    // Purpose: re-enables game buttons
+    //****************************************************
+    public void enableButtons(){
+        for (int i = 0; i < 9; i++){
+            if (!buttons[i].isEnabled()){
+                buttons[i].setEnabled(true);
+            }
+        }
     }
 
     //endregion
