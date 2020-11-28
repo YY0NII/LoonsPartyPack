@@ -1,3 +1,14 @@
+//******************************************************
+// File: MainActivity.java
+//
+// Purpose: to host the code for the menu that allows
+// user to chose a game.
+//
+// Written By: Jonathon Carrera
+//
+// Compiler: Android Studio
+//
+//******************************************************
 package com.example.loonspartypack;
 
 import androidx.appcompat.app.AppCompatActivity;

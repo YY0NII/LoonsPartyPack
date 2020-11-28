@@ -14,4 +14,5 @@
     <string name="tictactoe">TicTacToe</string>
     <string name="x_wins">X Wins</string>
     <string name="o_wins">O Wins</string>
+    <string name="no_winner">No Winner</string>
 </resources>

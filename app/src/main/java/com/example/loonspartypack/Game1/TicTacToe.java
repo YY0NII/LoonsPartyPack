@@ -1,7 +1,7 @@
 //******************************************************
 // File: TicTacToe.java
 //
-// Purpose: Contains necessary code for the tictactoe
+// Purpose: to host the necessary code for the tictactoe
 // game
 //
 // Written By: Jonathon Carrera
@@ -174,8 +174,7 @@ public class TicTacToe extends AppCompatActivity {
                 && !b4.getText().toString().isEmpty() && !b5.getText().toString().isEmpty() && !b6.getText().toString().isEmpty()
                 && !b7.getText().toString().isEmpty() && !b8.getText().toString().isEmpty() && !b9.getText().toString().isEmpty() )
         {
-            Toast.makeText(TicTacToe.this, "Game Over", Toast.LENGTH_LONG).show();
-            disableButtons();
+            noWinner();
         }
         //endregion
     }
@@ -193,6 +192,13 @@ public class TicTacToe extends AppCompatActivity {
         }
     }
 
+    //****************************************************
+    // Method: checkWhoWon()
+    //
+    // Purpose: to find out whether X or O has won then
+    // change the above textview and show a Toast reflecting
+    // it's findings
+    //****************************************************
     public void checkWhoWon(Button button){
         if (button.getText().toString().equals("X")){
             Toast.makeText(TicTacToe.this, "X Wins", Toast.LENGTH_LONG).show();
@@ -201,6 +207,18 @@ public class TicTacToe extends AppCompatActivity {
             Toast.makeText(TicTacToe.this, "O Wins", Toast.LENGTH_LONG).show();
             textView.setText(R.string.o_wins);
         }
+    }
+
+    //****************************************************
+    // Method: noWinner()
+    //
+    // Purpose: to change the textview and show a Toast
+    // that reflects that the game is over and no one has
+    // one
+    //****************************************************
+    public void noWinner(){
+        Toast.makeText(TicTacToe.this, "Game Over", Toast.LENGTH_LONG).show();
+        textView.setText(R.string.no_winner);
     }
 
     //****************************************************
@@ -239,6 +257,5 @@ public class TicTacToe extends AppCompatActivity {
             }
         }
     }
-
     //endregion
 }
