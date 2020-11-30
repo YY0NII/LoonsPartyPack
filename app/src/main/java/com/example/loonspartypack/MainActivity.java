@@ -4,7 +4,7 @@
 // Purpose: to host the code for the menu that allows
 // user to chose a game.
 //
-// Written By: Jonathon Carrera, Samson Fashakin
+// Written By: Jonathon Carrera and Samson Fashakin
 //
 // Compiler: Android Studio
 //
