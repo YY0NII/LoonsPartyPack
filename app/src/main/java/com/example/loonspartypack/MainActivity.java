@@ -38,19 +38,18 @@ public class MainActivity extends AppCompatActivity {
         game3 = findViewById(R.id.Game3);
         game4 = findViewById(R.id.Game4);
 
-        game2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Game2Activity.class));
-                finish();
-            }
-        });
-
-    
         game1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, TicTacToe.class));
+                finish();
+            }
+        });
+        
+        game2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Game2Activity.class));
                 finish();
             }
         });
