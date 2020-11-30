@@ -11,4 +11,8 @@
     <string name="family_name">Family name</string>
     <string name="date_of_birth">Date of birth</string>
     <string name="loon_s_party_pack">Loon\'s Party Pack</string>
+    <string name="tictactoe">TicTacToe</string>
+    <string name="x_wins">X Wins</string>
+    <string name="o_wins">O Wins</string>
+    <string name="no_winner">No Winner</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.loonspartypack">
 
     <application
@@ -10,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Game2.Game2Activity"></activity>
-        <activity android:name=".Game1.TicTacToe" />
+        <activity android:name=".Game1.TicTacToe"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+        </activity>
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashTheme">
@@ -26,5 +30,4 @@
         </activity>
         <activity android:name=".MainActivity" />
     </application>
-
 </manifest>
