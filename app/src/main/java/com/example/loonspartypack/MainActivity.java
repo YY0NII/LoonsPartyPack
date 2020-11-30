@@ -4,7 +4,7 @@
 // Purpose: to host the code for the menu that allows
 // user to chose a game.
 //
-// Written By: Jonathon Carrera
+// Written By: Jonathon Carrera, Samson Fashakin
 //
 // Compiler: Android Studio
 //
@@ -25,7 +25,7 @@ import com.example.loonspartypack.Game1.TicTacToe;
 import com.example.loonspartypack.Game2.Game2Activity;
 
 public class MainActivity extends AppCompatActivity {
-    Button game1;
+
 
     private Button game1, game2, game3, game4;
 
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Game2Activity.class));
                 finish();
-                }
-            });
-        }
+            }
+        });
+
     
         game1.setOnClickListener(new View.OnClickListener() {
             @Override
