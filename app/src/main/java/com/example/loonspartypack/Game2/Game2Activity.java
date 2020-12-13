@@ -16,6 +16,10 @@ import java.util.List;
 import java.util.Random;
 
 public class Game2Activity extends AppCompatActivity {
+    //Game Menu buttons
+    Button rules, reset;
+
+    View screen;
 
     //player 1's tile buttons
     Button player1_1Btn, player1_2Btn, player1_3Btn, player1_4Btn, player1_5Btn, player1_6Btn, player1_7Btn, player1_8Btn, player1_9Btn;
@@ -146,6 +150,12 @@ public class Game2Activity extends AppCompatActivity {
         player1_roll1Btn.setEnabled(false);
         player2_roll1Btn.setEnabled(false);
         player2_roll2Btn.setEnabled(false);
+
+        //long click listener for the view
+        screen = findViewById(R.id.screen);
+        //screen.setOnLongClickListener();
+        
+
 
         //add click listeners for Player 1's buttons
         for (Button button : player1Buttons) {
