@@ -1,3 +1,14 @@
+//******************************************************
+// File: SplashScreen.java
+//
+// Purpose: to host the necessary code for the splash screen
+// of our app
+//
+// Written By: Jonathon Carrera & Tom Willoughby
+//
+// Compiler: Android Studio
+//
+//******************************************************
 package com.example.loonspartypack;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,15 +22,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class SplashScreen extends AppCompatActivity {
-
-    // Slash Screen code is taken directly from My Individual Project 1 (Jonathon Carrera)
-    // I didn't know what a splash screen was or how to make one so I did end up using
-    // Online resources to help me out the main source I used is here:
-    // https://abhiandroid.com/programming/splashscreen
-
-    Handler handler; // This is my first time ever using a handler, Sadly I'm still not 100% sure
-    // how it works but in this case we used it to hold the splash screen for 3 seconds
-
+    Handler handler;
     ImageView lpp;
 
     @Override
@@ -33,15 +36,15 @@ public class SplashScreen extends AppCompatActivity {
         rotate.setDuration(3000);
         rotate.start();
 
-        handler = new Handler(); // I don't really know why Handler gets crossed out here but without this line the code crashes
+        handler = new Handler();
 
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent=new Intent(SplashScreen.this,MainActivity.class);
                 startActivity(intent);
-                finish(); // without this line the splash screen would pop back up after hitting the back button
+                finish();
             }
-        },3000);// The 3000 delays the splashscreen for 3 seconds
+        },3000);
     }
 }
