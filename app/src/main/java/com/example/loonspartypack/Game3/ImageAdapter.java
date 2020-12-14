@@ -1,3 +1,14 @@
+//******************************************************
+// File: ImageAdapter.java
+//
+// Purpose: to host the necessary code for the Image
+// Adapter class
+//
+// Written By: James D'Amico
+//
+// Compiler: Android Studio
+//
+//******************************************************
 package com.example.loonspartypack.Game3;
 
 import android.content.Context;
