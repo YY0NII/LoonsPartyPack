@@ -2,7 +2,10 @@
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -10,24 +13,31 @@
         android:orientation="vertical"
         android:layout_gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pick_a_game"
+        <ImageView
+            android:id="@+id/xo"
+            android:layout_width="433dp"
+            android:layout_height="135dp"
             android:layout_gravity="center"
-            android:textSize="25sp" />
+            android:src="@drawable/xo" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            />
+
+        <ImageView
+            android:id="@+id/lppword"
+            android:layout_width="337dp"
+            android:layout_height="104dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pickagame" />
+
+
 
         <Button
             android:id="@+id/Game1"
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/tictactoe" />
+            android:text="@string/tictactoe"
+            android:background="@color/colorPrimaryDark"
+       />
 
         <Space
             android:layout_width="match_parent"
@@ -39,7 +49,8 @@
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/jackpot" />
+            android:text="@string/jackpot"
+            android:background="@color/colorPrimaryDark"/>
 
         <Space
             android:layout_width="match_parent"
@@ -51,7 +62,8 @@
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/memory_matching" />
+            android:text="@string/memory_matching"
+            android:background="@color/colorPrimaryDark" />
 
         <Space
             android:layout_width="match_parent"
@@ -63,7 +75,23 @@
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/math_challenge"/>
+            android:text="@string/math_challenge"
+            android:background="@color/colorPrimaryDark"/>
+
+
+        <ImageView
+            android:id="@+id/dicecards"
+            android:layout_width="459dp"
+            android:layout_height="163dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:src="@drawable/dicecards" />
+
+
+
+
+
 
     </LinearLayout>
 

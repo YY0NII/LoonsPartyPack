@@ -83,14 +83,25 @@ class MathGameQuestions extends SQLiteOpenHelper {
 
         arraylist.add(new MathQuestions("35 + 74?", "107", "119", "109", "117", "109"));
 
-        arraylist.add(new MathQuestions("3 + 4x = 15", "x = 2", "x = 5", "x = 3", "x = 4", "x = 3"));
+        arraylist.add(new MathQuestions("3 + 4x = 15?", "x = 2", "x = 5", "x = 3", "x = 4", "x = 3"));
 
-        arraylist.add(new MathQuestions("5 - 2x = -3", "x = 4", "x = 5", "x = 3", "x = 6", "x = 4"));
+        arraylist.add(new MathQuestions("5 - 2x = -3?", "x = 4", "x = 5", "x = 3", "x = 6", "x = 4"));
 
-        arraylist.add(new MathQuestions("101 - 74", "17", "37", "47", "27", "27"));
+        arraylist.add(new MathQuestions("101 - 74?", "17", "37", "47", "27", "27"));
 
-        arraylist.add(new MathQuestions("7x + 5 = 26", "x = 3", "x = 4", "x = 5", "x = 6", "x = 3"));
+        arraylist.add(new MathQuestions("7x + 5 = 26?", "x = 3", "x = 4", "x = 5", "x = 6", "x = 3"));
 
+        arraylist.add(new MathQuestions("111 - 47?", "58", "64", "54", "68", "64"));
+
+        arraylist.add(new MathQuestions("4x - 5 = 11?", "x = 3", "x = 4", "x = 5", "x = 6", "x = 4"));
+
+        arraylist.add(new MathQuestions("5 + 7y = 54?", "y = 5", "y = 6", "y = 7", "y = 8", "y = 7"));
+
+        arraylist.add(new MathQuestions("90 - 6y = 36?", "y = 6", "y = 7", "y = 8", "y = 9", "y = 9"));
+
+        arraylist.add(new MathQuestions("74 - 3y = 62?", "y = 3", "y = 4", "y = 5", "y = 6", "y = 4"));
+
+        arraylist.add(new MathQuestions("112 - 5y = 37?", "y = 13", "y = 14", "y = 15", "y = 16", "y = 15"));
 
         this.addAllQuestions(arraylist);
 

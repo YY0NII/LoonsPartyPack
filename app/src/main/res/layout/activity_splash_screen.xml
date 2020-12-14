@@ -10,6 +10,7 @@
     android:theme="@style/SplashTheme">
 
     <ImageView
+        android:id="@+id/lpp"
         android:layout_width="339dp"
         android:layout_height="308dp"
         android:layout_gravity="center"
@@ -17,14 +18,12 @@
     <!--I used the vector asset that comes default in android studio
     Made it white and made it larger so that it would take up most of the screen-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/lppword"
+        android:layout_width="339dp"
+        android:layout_height="308dp"
         android:layout_gravity="center"
-        android:text="@string/loon_s_party_pack"
-        android:textSize="40sp"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"/>
+        app:srcCompat="@drawable/lppword" />
 
 
 </LinearLayout>
