@@ -63,7 +63,7 @@
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/game_4"/>
+            android:text="@string/math_challenge"/>
 
     </LinearLayout>
 
