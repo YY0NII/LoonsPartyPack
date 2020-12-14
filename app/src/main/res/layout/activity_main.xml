@@ -1,64 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_gravity="center">
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pick A Game!"
-        android:textSize="25sp"/>
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_a_game"
+            android:layout_gravity="center"
+            android:textSize="25sp" />
 
-    <Button
-        android:id="@+id/Game1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="game 1" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        />
+        <Button
+            android:id="@+id/Game1"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/tictactoe" />
 
-    <Button
-        android:id="@+id/Game2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="game 2"
-        android:onClick="playJackpot"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        />
+        <Button
+            android:id="@+id/Game2"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/jackpot" />
 
-    <Button
-        android:id="@+id/Game3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="game 3"
-        />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        />
+        <Button
+            android:id="@+id/Game3"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/memory_matching" />
 
-    <Button
-        android:id="@+id/Game4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="game 4"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/Game4"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/game_4"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

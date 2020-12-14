@@ -1,3 +1,14 @@
+//******************************************************
+// File: Game3Activity.java
+//
+// Purpose: to host the necessary code for the memory
+// matching game
+//
+// Written By: James D'Amico
+//
+// Compiler: Android Studio
+//
+//******************************************************
 package com.example.loonspartypack.Game3;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -72,6 +83,7 @@ public class Game3Activity extends AppCompatActivity {
                             i1.putExtra("score", turns);
 
                             startActivity(i1);
+                            finish();
                         }
                     }
 
@@ -92,5 +104,20 @@ public class Game3Activity extends AppCompatActivity {
         }
 
         return array;
+    }
+
+    //****************************************************
+    // Method: onBackPressed()
+    //
+    // Written By: Jonathon Carrera
+    //
+    // Purpose: To override the default onBackPressed()
+    // so that the rest of the application is not locked
+    // to portrait mode
+    //****************************************************
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }
