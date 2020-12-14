@@ -153,8 +153,18 @@ public class Game2Activity extends AppCompatActivity {
 
         //long click listener for the view
         screen = findViewById(R.id.screen);
-        //screen.setOnLongClickListener();
-        
+        screen.setOnLongClickListener(new View.OnLongClickListener(){
+
+            @Override
+            public boolean onLongClick(View v) {
+
+                //code goes here
+
+
+                return false;
+            }
+        });
+
 
 
         //add click listeners for Player 1's buttons
