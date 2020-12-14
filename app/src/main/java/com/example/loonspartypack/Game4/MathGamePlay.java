@@ -1,3 +1,13 @@
+//******************************************************
+// File: MathGamePlay.java
+//
+// Purpose: to host the code for the quiz game
+//
+// Written By: Thomas Willoughby
+//
+// Compiler: Android Studio
+//
+//******************************************************
 package com.example.loonspartypack.Game4;
 
 import android.app.Activity;
@@ -11,6 +21,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.loonspartypack.MainActivity;
 import com.example.loonspartypack.R;
 
 import java.util.Collections;
@@ -154,16 +165,6 @@ public class MathGamePlay extends Activity {
         super.onPause();
     }
 
-/*
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, HomeScreen.class);
-        startActivity(intent);
-        finish();
-    }
-
- */
-
     //This dialog is show to the user after he ans correct
     public void correctDialog() {
         final Dialog dialogCorrect = new Dialog( MathGamePlay.this);
@@ -211,6 +212,21 @@ public class MathGamePlay extends Activity {
         buttonB.setEnabled(true);
         buttonC.setEnabled(true);
         buttonD.setEnabled(true);
+    }
+
+    //****************************************************
+    // Method: onBackPressed()
+    //
+    // Written By: Jonathon Carrera
+    //
+    // Purpose: To override the default onBackPressed()
+    // so that the rest of the application is not locked
+    // to portrait mode
+    //****************************************************
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
 
