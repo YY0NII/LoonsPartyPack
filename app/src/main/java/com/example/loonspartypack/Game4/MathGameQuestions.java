@@ -1,3 +1,14 @@
+//******************************************************
+// File: MathGameQuestions.java
+//
+// Purpose: to host the code for the Qquestions that get
+// shown
+//
+// Written By: Thomas Willoughby
+//
+// Compiler: Android Studio
+//
+//******************************************************
 package com.example.loonspartypack.Game4;
 
 import android.content.ContentValues;

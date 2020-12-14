@@ -1,3 +1,13 @@
+//******************************************************
+// File: MathQuestions.java
+//
+// Purpose: to host the code for building the questions
+//
+// Written By: Thomas Willoughby
+//
+// Compiler: Android Studio
+//
+//******************************************************
 package com.example.loonspartypack.Game4;
 
 import android.app.Activity;

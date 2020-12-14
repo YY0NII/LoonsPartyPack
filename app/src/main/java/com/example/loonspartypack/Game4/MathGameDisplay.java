@@ -1,3 +1,13 @@
+//******************************************************
+// File: MathGameDisplay.java
+//
+// Purpose: to host the code for initial game4 activity
+//
+// Written By: Thomas Willoughby
+//
+// Compiler: Android Studio
+//
+//******************************************************
 package com.example.loonspartypack.Game4;
 
 import android.app.Activity;
@@ -43,4 +53,19 @@ public class MathGameDisplay extends Activity {
             }
         });
     }
+
+    //****************************************************
+    // Method: onBackPressed()
+    //
+    // Written By: Jonathon Carrera
+    //
+    // Purpose: To override the default onBackPressed()
+    // so that the rest of the application is not locked
+    // to portrait mode
+    //****************************************************
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
+}

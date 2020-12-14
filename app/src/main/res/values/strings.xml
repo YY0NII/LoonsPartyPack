@@ -23,6 +23,28 @@
     <string name="game_4">game 4</string>
     <string name="jackpot">Jackpot</string>
     <string name="memory_matching">Memory Matching</string>
+    <string name="jackpot_rule1">- At the start of the game all tiles (the numbered buttons) are "open", showing the numerals 1 to 9.
+                                   The goal of the game is to end with the lowest score.</string>
+    <string name="jackpot_rule2">- Player 1 begins their turn by rolling the dice</string>
+    <string name="jackpot_rule3">- If none of the remaining tiles are higher than 6, the player may roll only one die. Otherwise, the player must roll both dice.</string>
+    <string name="jackpot_rule4">- So, on their first turn, each player will always roll both dice</string>
+    <string name="jackpot_rule5">- After rolling the dice, the player adds up the total of both dice and then "closes"
+                                   a single tile or a combination of open tiles whose numbers equal the total of the dice, by clicking on the numbered tiles.</string>
+    <string name="jackpot_rule6">- The player then rolls the dice again, aiming to close more tiles.</string>
+    <string name="jackpot_rule7">- The player continues rolling the dice and closing tiles until the dice given them a total that the remaining tiles cannot add up to.
+                                   At this point, the player\'s turn is over and their score is the sum of their remaining tiles and the next player may begin their turn.</string>
+    <string name="jackpot_rule8">- After every player has taken a turn, the player with the lowest score wins.</string>
+    <string name="jackpot_rule9">- If a player manages to close all their tiles first they\'ve hit the Jackpot and immediately win.</string>
+    <string name="jackpot_rule10">- Touch and hold on the screen to bring up the menu.</string>
+
+
+
+
+
+
+
+
+
     <string name="mathgameinstructions">Get 10 Correct Answers in a row to win!</string>
     <string name="math_challenge">Math Game</string>
 </resources>
