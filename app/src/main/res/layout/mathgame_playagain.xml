@@ -13,6 +13,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Wrong Answer!"
+        android:shadowColor="@color/black"
+        android:shadowRadius="50"
         android:textColor="@color/green"
         android:textSize="30sp" />
 
@@ -22,7 +24,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="Next Question"
+        android:text="Try Again"
         android:background="@color/colorPrimaryDark"
 
         />
