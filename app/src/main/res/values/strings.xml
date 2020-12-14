@@ -23,4 +23,5 @@
     <string name="game_4">game 4</string>
     <string name="jackpot">Jackpot</string>
     <string name="memory_matching">Memory Matching</string>
+    <string name="mathgameinstructions">Get 10 Correct Answers in a row to win!</string>
 </resources>

@@ -31,6 +31,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+        <activity android:name=".Game4.MathGameDisplay" />
+        <activity android:name=".Game4.MathGamePlay" />
+        <activity android:name=".Game4.MathGamePlayAgain" />
+        <activity android:name=".Game4.MathGameWon" />
     </application>
 
 </manifest>
