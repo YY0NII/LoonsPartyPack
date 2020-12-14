@@ -10,11 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Game2.Game2Activity"></activity>
-        <activity android:name=".Game1.TicTacToe"
+        <activity android:name=".Game3.EndGame"></activity>
+        <activity android:name=".Game3.Game3Activity" />
+        <activity android:name=".Game2.Game2Activity" />
+        <activity
+            android:name=".Game1.TicTacToe"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
-        </activity>
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashTheme">
@@ -30,4 +32,5 @@
         </activity>
         <activity android:name=".MainActivity" />
     </application>
+
 </manifest>

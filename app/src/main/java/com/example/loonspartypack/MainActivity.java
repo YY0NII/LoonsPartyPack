@@ -4,7 +4,7 @@
 // Purpose: to host the code for the menu that allows
 // user to chose a game.
 //
-// Written By: Jonathon Carrera, Samson Fashakin
+// Written By: Jonathon Carrera and Samson Fashakin
 //
 // Compiler: Android Studio
 //
@@ -18,11 +18,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.content.SharedPreferences;
-import android.widget.TextView;
 
 import com.example.loonspartypack.Game1.TicTacToe;
 import com.example.loonspartypack.Game2.Game2Activity;
+import com.example.loonspartypack.Game3.Game3Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
         game3 = findViewById(R.id.Game3);
         game4 = findViewById(R.id.Game4);
 
+        game1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TicTacToe.class));
+                finish();
+            }
+        });
+        
         game2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,11 +53,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    
-        game1.setOnClickListener(new View.OnClickListener() {
+        game3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, TicTacToe.class));
+                startActivity(new Intent(MainActivity.this, Game3Activity.class));
                 finish();
             }
         });
