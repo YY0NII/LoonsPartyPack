@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#F3BE00</color>
     <color name="colorAccent">#03DA32</color>
     <color name="game2Text">#FFFFFF</color>
+    <color name="green">#00ff00</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="cyan">#00FFFF</color>
 </resources>

@@ -45,4 +45,6 @@
 
 
 
+    <string name="mathgameinstructions">Get 10 Correct Answers in a row to win!</string>
+    <string name="math_challenge">Math Game</string>
 </resources>
