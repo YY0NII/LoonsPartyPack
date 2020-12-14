@@ -11,6 +11,7 @@
 //******************************************************
 package com.example.loonspartypack.Game2;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -19,12 +20,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.loonspartypack.Game1.TicTacToe;
 import com.example.loonspartypack.MainActivity;
 import com.example.loonspartypack.R;
 
-import java.net.InterfaceAddress;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -63,6 +64,7 @@ public class Game2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game2);
+
         //assigning all the button objects for player 1's tiles
         player1_1Btn = findViewById(R.id.b_player1_1);
         player1_2Btn = findViewById(R.id.b_player1_2);
@@ -173,8 +175,7 @@ public class Game2Activity extends AppCompatActivity {
             public boolean onLongClick(View v) {
 
                 //code goes here
-
-
+                openMenuDialog();
                 return false;
             }
         });
@@ -481,6 +482,7 @@ public class Game2Activity extends AppCompatActivity {
         
         if(checkWin){
             statusView.setText("Player 1 wins!");
+            Toast.makeText(Game2Activity.this, "Player 1 Wins! Open the menu to quit or play again.", Toast.LENGTH_LONG).show();
         }
 
         }
@@ -500,12 +502,15 @@ public class Game2Activity extends AppCompatActivity {
             statusView.setText("" + player2Points);
             if(player1Points < player2Points){
                 statusView.setText("Player 1 wins!");
+                Toast.makeText(Game2Activity.this, "Player 1 Wins! Open the menu to quit or play again.", Toast.LENGTH_LONG).show();
             }
             else if(player2Points < player1Points){
                 statusView.setText("Player 2 wins!");
+                Toast.makeText(Game2Activity.this, "Player 2 Wins! Open the menu to quit or play again.", Toast.LENGTH_LONG).show();
             }
             else{
                 statusView.setText("Draw!");
+                Toast.makeText(Game2Activity.this, "Draw! Open the menu to quit or play again.", Toast.LENGTH_LONG).show();
             }
         }
 
@@ -520,6 +525,7 @@ public class Game2Activity extends AppCompatActivity {
 
         if (checkWin) {
             statusView.setText("Player 2 wins!");
+            Toast.makeText(Game2Activity.this, "Player 2 Wins! Open the menu to quit or play again.", Toast.LENGTH_LONG).show();
         }
 
     }
@@ -537,6 +543,12 @@ public class Game2Activity extends AppCompatActivity {
     public void onBackPressed() {
         startActivity(new Intent(this, MainActivity.class));
         finish();
+    }
+
+
+    public void openMenuDialog(){
+        LongPressDialog menuDialog = new LongPressDialog();
+        menuDialog.show(getSupportFragmentManager(), "Menu");
     }
 
     }

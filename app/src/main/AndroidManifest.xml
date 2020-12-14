@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Game3.EndGame"></activity>
+        <activity android:name=".Game2.Rules"></activity>
+        <activity android:name=".Game3.EndGame" />
         <activity android:name=".Game3.Game3Activity" />
         <activity android:name=".Game2.Game2Activity" />
         <activity

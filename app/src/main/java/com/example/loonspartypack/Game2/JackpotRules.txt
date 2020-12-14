@@ -1,7 +1,7 @@
 Game 2 is finished, coded a table top game called Jackpot
 
 Here are the Rules:
-At the start of the game all tiles (the numbered buttons) are "open" (cleared, up), showing the numerals 1 to 9.
+At the start of the game all tiles (the numbered buttons) are "open", showing the numerals 1 to 9.
 
 During the game, each player plays in turn. A player begins his or her turn by rolling the die or dice into the box.
 If the remaining tile(s) show 6 or lower, the player may roll only one die. Otherwise, the player must roll both dice.
