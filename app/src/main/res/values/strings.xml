@@ -29,7 +29,7 @@
     <string name="jackpot_rule3">- If none of the remaining tiles are higher than 6, the player may roll only one die. Otherwise, the player must roll both dice.</string>
     <string name="jackpot_rule4">- So, on their first turn, each player will always roll both dice</string>
     <string name="jackpot_rule5">- After rolling the dice, the player adds up the total of both dice and then "closes"
-                                   a single combination of open numbers that equals the total number on the dice, by clicking on the numbered tiles.</string>
+                                   a single tile or a combination of open tiles whose numbers equal the total of the dice, by clicking on the numbered tiles.</string>
     <string name="jackpot_rule6">- The player then rolls the dice again, aiming to close more tiles.</string>
     <string name="jackpot_rule7">- The player continues rolling the dice and closing tiles until the dice given them a total that the remaining tiles cannot add up to.
                                    At this point, the player\'s turn is over and their score is the sum of their remaining tiles and the next player may begin their turn.</string>
