@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -27,8 +28,9 @@ public class MathGamePlay extends Activity {
     MathGameQuestions mq;
     MathQuestions currentQues;
     List<MathQuestions> list;
-    int qid = 0;
-    int num = 7;
+    int q = 0;
+    int num = 8;
+
 
 
 
@@ -36,6 +38,8 @@ public class MathGamePlay extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mathgame_play);
+
+
 
         //Initializing variables
         questionText = (TextView) findViewById(R.id.triviaQuestion);
@@ -48,7 +52,7 @@ public class MathGamePlay extends Activity {
         resultText = (TextView) findViewById(R.id.resultText);
 
 
-        countnum.setText("" + qid + 1);
+        countnum.setText("" + q + 1);
 
         mq = new MathGameQuestions(this);
         mq.getWritableDatabase();
@@ -62,7 +66,7 @@ public class MathGamePlay extends Activity {
 
         Collections.shuffle(list);
 
-        currentQues = list.get(qid);
+        currentQues = list.get(q);
 
         updateQueAndOptions();
 
@@ -78,7 +82,7 @@ public class MathGamePlay extends Activity {
         buttonC.setText(currentQues.getOptC());
         buttonD.setText(currentQues.getOptD());
 
-        countnum.setText(Integer.toString(qid + 1));
+        countnum.setText(Integer.toString(q + 1));
 
     }
 
@@ -114,9 +118,12 @@ public class MathGamePlay extends Activity {
         }
     }
     private void axMthod(){
-        if (qid <= num) {
+        if (q <= num) {
+            MediaPlayer correct= MediaPlayer.create(MathGamePlay.this,R.raw.correct);
+            correct.start();
             disableButton();
             correctDialog();
+
         } else {
             gameWon();
         }
@@ -187,8 +194,8 @@ public class MathGamePlay extends Activity {
             @Override
             public void onClick(View view) {
                 dialogCorrect.dismiss();
-                qid++;
-                currentQues= list.get(qid);
+                q++;
+                currentQues= list.get(q);
                 updateQueAndOptions();
                 enableButton();
             }
