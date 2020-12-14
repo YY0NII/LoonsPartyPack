@@ -10,10 +10,10 @@
     android:theme="@style/SplashTheme">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="339dp"
+        android:layout_height="308dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_white_80dp" />
+        app:srcCompat="@drawable/lpp" />
     <!--I used the vector asset that comes default in android studio
     Made it white and made it larger so that it would take up most of the screen-->
 

@@ -15,4 +15,14 @@
     <string name="x_wins">X Wins</string>
     <string name="o_wins">O Wins</string>
     <string name="no_winner">No Winner</string>
+    <string name="reset">Reset</string>
+    <string name="pick_a_game">Pick A Game!</string>
+    <string name="game_1">game 1</string>
+    <string name="game_2">game 2</string>
+    <string name="game_3">game 3</string>
+    <string name="game_4">game 4</string>
+    <string name="jackpot">Jackpot</string>
+    <string name="memory_matching">Memory Matching</string>
+    <string name="mathgameinstructions">Get 10 Correct Answers in a row to win!</string>
+    <string name="math_challenge">Math Game</string>
 </resources>

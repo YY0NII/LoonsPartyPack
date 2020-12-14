@@ -3,10 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".Game1.TicTacToe">
+    tools:context=".Game1.TicTacToe"
+    android:background="@drawable/paper_bg">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
 
     <TextView
         android:id="@+id/tv1"
@@ -14,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/tictactoe"
+        android:textColor="#000000"
         android:textSize="30sp"/>
 
     <Space
@@ -37,7 +43,7 @@
                 android:id="@+id/button1"
                 android:layout_width="50dp"
                 android:layout_height="100dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:textColor="#000000"
                 android:textSize="50sp"
                 android:layout_weight="1"
@@ -53,7 +59,7 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:onClick="buttonClicked"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:textColor="#000000"
                 android:textSize="50sp"/>
 
@@ -67,7 +73,7 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:onClick="buttonClicked"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:textColor="#000000"
                 android:textSize="50sp"/>
 
@@ -87,7 +93,7 @@
                 android:id="@+id/button4"
                 android:layout_width="50dp"
                 android:layout_height="100dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:textColor="#000000"
                 android:textSize="50sp"
                 android:layout_weight="1"
@@ -101,7 +107,7 @@
                 android:id="@+id/button5"
                 android:layout_width="50dp"
                 android:layout_height="100dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:textColor="#000000"
                 android:textSize="50sp"
                 android:layout_weight="1"
@@ -115,7 +121,7 @@
                 android:id="@+id/button6"
                 android:layout_width="50dp"
                 android:layout_height="100dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:textColor="#000000"
                 android:textSize="50sp"
                 android:layout_weight="1"
@@ -137,7 +143,7 @@
                 android:id="@+id/button7"
                 android:layout_width="50dp"
                 android:layout_height="100dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:textColor="#000000"
                 android:textSize="50sp"
                 android:layout_weight="1"
@@ -152,7 +158,7 @@
 
                 android:layout_width="50dp"
                 android:layout_height="100dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:textColor="#000000"
                 android:textSize="50sp"
                 android:layout_weight="1"
@@ -166,7 +172,7 @@
                 android:id="@+id/button9"
                 android:layout_width="50dp"
                 android:layout_height="100dp"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:textColor="#000000"
                 android:textSize="50sp"
                 android:layout_weight="1"
@@ -186,10 +192,14 @@
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_gravity="center"
-        android:text="Reset"
+        android:text="@string/reset"
+        android:background="#00FFFFFF"
+        android:layout_weight="3"
+        android:textColor="#000000"
+        android:textSize="20dp"
         android:onClick="reset"/>
 
 

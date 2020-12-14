@@ -22,6 +22,7 @@ import android.widget.Button;
 import com.example.loonspartypack.Game1.TicTacToe;
 import com.example.loonspartypack.Game2.Game2Activity;
 import com.example.loonspartypack.Game3.Game3Activity;
+import com.example.loonspartypack.Game4.MathGameDisplay;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,6 +58,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Game3Activity.class));
+                finish();
+            }
+        });
+
+        game4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MathGameDisplay.class));
                 finish();
             }
         });
