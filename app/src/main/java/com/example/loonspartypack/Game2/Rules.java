@@ -40,4 +40,19 @@ public class Rules extends AppCompatActivity {
         });
 
     }
+
+    //****************************************************
+    // Method: onBackPressed()
+    //
+    // Written By: Jonathon Carrera
+    //
+    // Purpose: To override the default onBackPressed()
+    // so that the rest of the application is not locked
+    // to portrait mode
+    //****************************************************
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 }
